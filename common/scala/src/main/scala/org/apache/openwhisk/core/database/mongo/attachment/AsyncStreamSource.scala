@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package whisk.core.database.mongo.attachment
+package org.apache.openwhisk.core.database.mongo.attachment
 
 import java.nio.ByteBuffer
 

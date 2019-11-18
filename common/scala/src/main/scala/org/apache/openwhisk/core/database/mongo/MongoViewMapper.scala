@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package whisk.core.database.mongo
+package org.apache.openwhisk.core.database.mongo
 
 import org.mongodb.scala.bson.conversions.Bson
 import org.mongodb.scala.model.Filters._

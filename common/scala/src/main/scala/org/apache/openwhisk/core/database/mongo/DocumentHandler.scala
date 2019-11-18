@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package whisk.core.database.mongo
+package org.apache.openwhisk.core.database.mongo
 
 import spray.json._
 import spray.json.DefaultJsonProtocol._

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package whisk.core.database.mongo
+package org.apache.openwhisk.core.database.mongo
 
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicBoolean
