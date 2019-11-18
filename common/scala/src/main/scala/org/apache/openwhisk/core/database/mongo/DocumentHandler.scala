@@ -19,9 +19,9 @@ package org.apache.openwhisk.core.database.mongo
 
 import spray.json._
 import spray.json.DefaultJsonProtocol._
-import whisk.common.TransactionId
-import whisk.core.entity.EntityPath.PATHSEP
-import whisk.utils.JsHelpers
+import org.apache.openwhisk.common.TransactionId
+import org.apache.openwhisk.core.entity.EntityPath.PATHSEP
+import org.apache.openwhisk.utils.JsHelpers
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext

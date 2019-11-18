@@ -20,9 +20,9 @@ package org.apache.openwhisk.core.database.mongo
 import org.mongodb.scala.bson.conversions.Bson
 import org.mongodb.scala.model.Filters._
 import org.mongodb.scala.model.Sorts
-import whisk.core.database.mongo.MongoDbStore._data
-import whisk.core.database.mongo.MongoDbStore._computed
-import whisk.core.entity.WhiskEntityQueries
+import org.apache.openwhisk.core.database.mongo.MongoDbStore._data
+import org.apache.openwhisk.core.database.mongo.MongoDbStore._computed
+import org.apache.openwhisk.core.entity.WhiskEntityQueries
 
 trait MongoViewMapper {
   protected val TOP: String = WhiskEntityQueries.TOP

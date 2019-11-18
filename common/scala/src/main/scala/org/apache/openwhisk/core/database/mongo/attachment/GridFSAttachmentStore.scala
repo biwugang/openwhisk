@@ -33,13 +33,13 @@ import org.mongodb.scala.bson.ObjectId
 import org.mongodb.scala.gridfs.GridFSFile
 import org.mongodb.scala.gridfs.MongoGridFSException
 import org.mongodb.scala.model.Filters
-import whisk.common.TransactionId
-import whisk.common.LoggingMarkers
-import whisk.common.Logging
-import whisk.core.database.ArtifactStoreException
-import whisk.core.database.NoDocumentException
-import whisk.core.database.mongo.AttachmentStore
-import whisk.core.entity.DocInfo
+import org.apache.openwhisk.common.TransactionId
+import org.apache.openwhisk.common.LoggingMarkers
+import org.apache.openwhisk.common.Logging
+import org.apache.openwhisk.core.database.ArtifactStoreException
+import org.apache.openwhisk.core.database.NoDocumentException
+import org.apache.openwhisk.core.database.mongo.AttachmentStore
+import org.apache.openwhisk.core.entity.DocInfo
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext

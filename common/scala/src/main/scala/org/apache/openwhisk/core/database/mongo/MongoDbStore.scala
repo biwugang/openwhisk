@@ -32,14 +32,14 @@ import org.mongodb.scala.MongoCollection
 import spray.json.DefaultJsonProtocol
 import spray.json.RootJsonFormat
 import spray.json.JsObject
-import whisk.common.Logging
-import whisk.common.TransactionId
-import whisk.common.LoggingMarkers
-import whisk.core.database.DocumentSerializer
-import whisk.core.database.ArtifactStore
-import whisk.core.database.StaleParameter
-import whisk.core.entity.DocumentReader
-import whisk.core.entity.DocInfo
+import org.apache.openwhisk.common.Logging
+import org.apache.openwhisk.common.TransactionId
+import org.apache.openwhisk.common.LoggingMarkers
+import org.apache.openwhisk.core.database.DocumentSerializer
+import org.apache.openwhisk.core.database.ArtifactStore
+import org.apache.openwhisk.core.database.StaleParameter
+import org.apache.openwhisk.core.entity.DocumentReader
+import org.apache.openwhisk.core.entity.DocInfo
 
 import scala.concurrent.ExecutionContext
 import scala.concurrent.Future
@@ -53,17 +53,17 @@ import org.mongodb.scala.model.Filters._
 import org.mongodb.scala.model.Projections._
 import spray.json._
 import spray.json.JsNumber
-import whisk.core.database.DocumentConflictException
-import whisk.core.database.ArtifactStoreException
-import whisk.core.database.NoDocumentException
-import whisk.core.database.DocumentTypeMismatchException
-import whisk.core.database.DocumentUnreadable
-import whisk.core.database.mongo.MongoDbStore._data
-import whisk.core.database.mongo.MongoDbStore._computed
-import whisk.core.entity.DocId
-import whisk.core.entity.DocRevision
-import whisk.core.entity.WhiskDocument
-import whisk.http.Messages
+import org.apache.openwhisk.core.database.DocumentConflictException
+import org.apache.openwhisk.core.database.ArtifactStoreException
+import org.apache.openwhisk.core.database.NoDocumentException
+import org.apache.openwhisk.core.database.DocumentTypeMismatchException
+import org.apache.openwhisk.core.database.DocumentUnreadable
+import org.apache.openwhisk.core.database.mongo.MongoDbStore._data
+import org.apache.openwhisk.core.database.mongo.MongoDbStore._computed
+import org.apache.openwhisk.core.entity.DocId
+import org.apache.openwhisk.core.entity.DocRevision
+import org.apache.openwhisk.core.entity.WhiskDocument
+import org.apache.openwhisk.http.Messages
 
 object MongoDbStore {
   val _data = "_data"

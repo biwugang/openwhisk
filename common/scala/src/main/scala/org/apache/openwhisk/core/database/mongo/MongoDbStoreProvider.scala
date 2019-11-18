@@ -21,16 +21,16 @@ import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import org.mongodb.scala.MongoClient
 import spray.json.RootJsonFormat
-import whisk.common.Logging
-import whisk.core.database.ArtifactStoreProvider
-import whisk.core.database.ArtifactStore
-import whisk.core.database.DocumentSerializer
-import whisk.core.entity.DocumentReader
+import org.apache.openwhisk.common.Logging
+import org.apache.openwhisk.core.database.ArtifactStoreProvider
+import org.apache.openwhisk.core.database.ArtifactStore
+import org.apache.openwhisk.core.database.DocumentSerializer
+import org.apache.openwhisk.core.entity.DocumentReader
 import pureconfig._
-import whisk.core.database.mongo.attachment.GridFSAttachmentStore
-import whisk.core.entity.WhiskEntity
-import whisk.core.entity.WhiskActivation
-import whisk.core.entity.WhiskAuth
+import org.apache.openwhisk.core.database.mongo.attachment.GridFSAttachmentStore
+import org.apache.openwhisk.core.entity.WhiskEntity
+import org.apache.openwhisk.core.entity.WhiskActivation
+import org.apache.openwhisk.core.entity.WhiskAuth
 
 import scala.reflect.ClassTag
 

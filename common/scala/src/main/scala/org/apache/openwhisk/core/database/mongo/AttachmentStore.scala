@@ -21,8 +21,8 @@ import akka.http.scaladsl.model.ContentType
 import akka.stream.scaladsl.Source
 import akka.stream.scaladsl.Sink
 import akka.util.ByteString
-import whisk.common.TransactionId
-import whisk.core.entity.DocInfo
+import org.apache.openwhisk.common.TransactionId
+import org.apache.openwhisk.core.entity.DocInfo
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext
