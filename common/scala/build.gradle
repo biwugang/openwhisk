@@ -91,6 +91,10 @@ dependencies {
         exclude group: 'com.fasterxml.jackson.dataformat'
     }
     compile ('com.amazonaws:aws-java-sdk-cloudfront:1.11.517')
+
+    //for mongo
+    compile ('org.mongodb.scala:mongo-scala-driver_2.12:2.6.0')
+
     //Following constraints ensure that akka related transitive dependencies match the
     //current version used
     constraints {
