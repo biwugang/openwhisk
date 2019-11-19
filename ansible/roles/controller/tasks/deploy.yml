@@ -329,8 +329,8 @@
     volumes: "{{ controller_volumes }}"
     ports: "{{ ports_to_expose }}"
     # userns_mode, pid_mode and privileged required when controller running in lean mode
-    userns_mode: "{{ userns_mode | default('') }}"
-    pid_mode: "{{ pid_mode | default('') }}"
+    userns_mode: "host"
+    pid_mode: "host"
     privileged: "{{ privileged | default('no') }}"
     command:
       /bin/sh -c

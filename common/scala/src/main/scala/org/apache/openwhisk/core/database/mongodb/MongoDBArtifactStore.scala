@@ -73,7 +73,7 @@ class MongoDBArtifactStore[DocumentAbstraction <: DocumentSerializer](client: Mo
     with DefaultJsonProtocol
     with AttachmentSupport[DocumentAbstraction] {
 
-  import whisk.core.database.mongodb.MongoDBArtifactStore._
+  import org.apache.openwhisk.core.database.mongodb.MongoDBArtifactStore._
 
   protected[core] implicit val executionContext = system.dispatcher
 
@@ -331,7 +331,7 @@ class MongoDBArtifactStore[DocumentAbstraction <: DocumentSerializer](client: Mo
     val option = CountOptions().skip(skip)
     val f =
       collection
-        .count(query, option)
+        .countDocuments(query, option)
         .toFuture()
         .map { result =>
           transid.finished(this, start, s"[COUNT] '$collName' completed: count $result")
@@ -550,7 +550,7 @@ class MongoDBArtifactStore[DocumentAbstraction <: DocumentSerializer](client: Mo
   }
 
   private def reportFailure[T, U](f: Future[T], onFailure: Throwable => U): Future[T] = {
-    f.onFailure({
+    f.failed.foreach({
       case _: ArtifactStoreException => // These failures are intentional and shouldn't trigger the catcher.
       case x                         => onFailure(x)
     })
