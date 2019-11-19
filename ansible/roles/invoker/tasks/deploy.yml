@@ -279,6 +279,10 @@
       "CONFIG_whisk_invoker_https_keystoreFlavor": "{{ invoker.ssl.storeFlavor }}"
       "CONFIG_whisk_invoker_https_clientAuth": "{{ invoker.ssl.clientAuth }}"
 
+      "CONFIG_whisk_mongodb_uri": "mongodb://127.0.0.1:27017"
+      "CONFIG_whisk_mongodb_database": "openwhisk"
+      "CONFIG_whisk_spi_ArtifactStoreProvider": "org.apache.openwhisk.core.database.mongodb.MongoDBArtifactStoreProvider"
+
 - name: extend invoker dns env
   set_fact:
     env: "{{ env | default({}) | combine( {'CONFIG_whisk_containerFactory_containerArgs_dnsServers_' ~ inv_item.0: inv_item.1} ) }}"

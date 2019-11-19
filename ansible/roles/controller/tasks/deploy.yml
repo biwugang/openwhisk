@@ -271,14 +271,14 @@
 
       "CONFIG_whisk_controller_activation_pollingFromDb": "{{ controller_activation_pollingFromDb | default(true) | string }}"
 
+      "CONFIG_whisk_mongodb_uri": "mongodb://127.0.0.1:27017"
+      "CONFIG_whisk_mongodb_database": "openwhisk"
+      "CONFIG_whisk_spi_ArtifactStoreProvider": "org.apache.openwhisk.core.database.mongodb.MongoDBArtifactStoreProvider"
+
 - name: merge extra env variables
   set_fact:
     env: "{{ env | combine(controller.extraEnv) }}"
 
-- name: merge mongodb env variables
-  set_fact:
-    env: "{{ env | combine(mongodb.commonEnv) }}"
-  when: db.backend == "MongoDB"
 
 - name: populate volumes for controller
   set_fact:
