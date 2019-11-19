@@ -22,10 +22,10 @@ import org.mongodb.scala.model.Filters._
 import org.mongodb.scala.model.Sorts
 import org.apache.openwhisk.core.database.mongo.MongoDbStore._data
 import org.apache.openwhisk.core.database.mongo.MongoDbStore._computed
-import org.apache.openwhisk.core.entity.WhiskEntityQueries
+import org.apache.openwhisk.core.entity.WhiskQueries
 
 trait MongoViewMapper {
-  protected val TOP: String = WhiskEntityQueries.TOP
+  protected val TOP: String = WhiskQueries.TOP
 
   def filter(ddoc: String, view: String, startKey: List[Any], endKey: List[Any]): Bson
 
