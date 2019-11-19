@@ -52,7 +52,7 @@ private object MongoClientHelper {
         .builder()
         .addCommandListener(LoggingListener)
         .codecRegistry(MongoClient.DEFAULT_CODEC_REGISTRY)
-        .applyToClusterSettings(ClusterSettings.builder().applyConnectionString(connectionString).build())
+        .clusterSettings(ClusterSettings.builder().applyConnectionString(connectionString).build())
         .connectionPoolSettings(ConnectionPoolSettings.builder().applyConnectionString(connectionString).build())
         .serverSettings(ServerSettings.builder().build())
         .credentialList(connectionString.getCredentialList)
